@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function day(d) {
+            
+            switch (d) {
+                case 0:
+                    return "dimanche" ;
+                    break;
+                case 1:
+                    return "lundi";
+                    break;
+                case 2:
+                    return "mardi";
+                    break;
+                case 3:
+                    return "mercredi";
+                    break;
+                case 4:
+                    return "jeudi";
+                    break;
+                case 5:
+                    return "vendredi";
+                    break;
+                case 6:
+                    return "samedi";
+                    break;
+                default:
+                    return "invalid input";
+            }
+        }
+
+        function month(m) {
+            var m ;
+            switch (m) {
+                case 0:
+                    return "January";
+                case 1:
+                    return "February";
+                case 2:
+                    return "March";
+                case 3:
+                    return "April";
+                case 4:
+                    return "May";
+                case 5:
+                    return "June";
+                case 6:
+                    return "July";
+                case 7:
+                    return "August";
+                case 8:
+                    return "September";
+                case 9:
+                    return "October";
+                case 10:
+                    return "November";
+                case 11:
+                    return "December";
+                default:
+                    return "Invalid input";
+            }
+
+        }
+
+        function dat()
+        {
+        var currentDate = new Date();
+        var currentYear = currentDate.getFullYear();
+        var currentMonth = month(currentDate.getMonth());
+        var currentDay = day(currentDate.getDay());
+       
+        alert("nous somme " + currentDay+" "+currentDate.getDate()+" "+currentMonth+" "+currentYear )
+    }
+    </script>
+    <input type="button" value="quel jour nous somme " onclick="dat()"  >
+</body>
+</html>

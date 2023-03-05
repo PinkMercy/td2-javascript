@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        ip = prompt("donner an ip adress")
+        var test = false
+        for (i = 0; i < 3; i++) {
+            ip1 = ip.slice(0, ip.indexOf("."))
+            test = false
+            if ((parseInt(ip1) >= 0) && (parseInt(ip1) <= 255) && (!isNaN(ip1)) && (ip1.length > 0)) {
+                test = true
+            }
+
+            if (test == false) {
+                i = ip.length
+            }
+            delete ip1;
+            ip = ip.slice(ip.indexOf(".") + 1)
+        }
+
+        if (test && (parseInt(ip) >= 0) && (parseInt(ip) <= 255) && (!isNaN(ip)) && (ip.length > 0)) {
+            test = true
+        } else test = false
+
+        if ((test == true)) {
+            alert("correct")
+        } else alert("incorrect")
+    </script>
+</body>
+
+</html>

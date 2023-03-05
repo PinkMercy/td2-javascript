@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const tab = [71, 13, 38, 94, 22, 28, 6, 9, 67, 71];
+        document.write("<table border=1><tr>")
+        for (i = 0; i < 10; i++) {
+            document.write("<td>", tab[i], "</td>")
+        }
+        document.write("</tr></table>")
+        document.write("<br>")
+        tab1 = tab.sort()
+        document.write("<table border=1><tr>")
+        for (i = 0; i < 10; i++) {
+            document.write("<td>", tab1[i], "</td>")
+        }
+        document.write("</tr></table>", )
+        document.write("<table border=1><tr>")
+        document.write("<br>")
+        tab2 = tab.sort(function (a, b) {
+            return a - b
+        })
+        for (i = 0; i < 10; i++) {
+            document.write("<td>", tab2[i], "</td>")
+        }
+        document.write("</tr></table>", )
+    </script>
+</body>
+
+</html>

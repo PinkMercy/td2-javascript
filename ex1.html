@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1
+        function day() {
+            // do {
+            var d = prompt("give me a number from 0 to 6")
+            // }while((d<0) && (d>6))
+
+            switch (d) {
+                case "0":
+                    return "dimanche"
+                    break;
+                case "1":
+                    return "lundi"
+                    break;
+                case "2":
+                    return "mardi"
+                    break;
+                case "3":
+                    return "mercredi"
+                    break;
+                case "4":
+                    return "jeudi"
+                    break;
+                case "5":
+                    return "vendredi"
+                    break;
+                case "6":
+                    return "samedi"
+                    break;
+                default:
+                    return "impooo"
+            }
+        }
+        //document.write(day())
+        ////////////////////////////////////////////////
+
+        //2
+        function month() {
+            //var m = prompt("Enter a number between 0 and 11:");
+
+            switch (m) {
+                case "0":
+                    return "January";
+                case "1":
+                    return "February";
+                case "2":
+                    return "March";
+                case "3":
+                    return "April";
+                case "4":
+                    return "May";
+                case "5":
+                    return "June";
+                case "6":
+                    return "July";
+                case "7":
+                    return "August";
+                case "8":
+                    return "September";
+                case "9":
+                    return "October";
+                case "10":
+                    return "November";
+                case "11":
+                    return "December";
+                default:
+                    return "Invalid input";
+            }
+
+        }
+        //document.write(month())
+        //////////////////////////////////////////////////////
+
+        //3
+        function dat()
+        {
+
+       
+     
+        var currentDate = new Date();
+        var currentYear = currentDate.getFullYear();
+        var currentMonth = month(currentDate.getMonth() + 1);
+        var currentDay = day(currentDate.getDay());
+ 
+        alert("nous somme"+currentDay+" "+currentDate.getDate()+" "+currentMonth+" "+currentYear )
+    }alert(dat())
+    </script>
+</body>
+
+</html>
